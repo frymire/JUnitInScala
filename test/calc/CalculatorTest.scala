@@ -39,7 +39,7 @@ class CalculatorTest {
   // Scala is complaining that this isn't public, but it's public by default (?).
 //  @Rule val thrown = ExpectedException.none()
   
-//  @Test(expected = ArithmeticException.class)
-  def divideByZeroThrowsError { calc div 0 }
+  @Test(expected = classOf[ArithmeticException])
+  def shouldThrowAritmeticException_whenYouDivideBy0 { calc div 0 }
   
 }
